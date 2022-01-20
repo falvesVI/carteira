@@ -5,3 +5,56 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+
+# Routes revenues
+api_revenues:
+    path: /receitas
+    controller: App\Controller\RevenueController::index
+    methods: GET
+
+api_revenue_create:
+    path: /receitas
+    controller: App\Controller\RevenueController::create
+    methods: POST
+
+api_revenue_update:
+    path: /receitas/{id}
+    controller: App\Controller\RevenueController::update
+    methods: PUT
+
+api_revenue_find:
+    path: /receitas/{id}
+    controller: App\Controller\RevenueController::findById
+    methods: GET
+
+api_revenue_delete:
+    path: /receitas/{id}
+    controller: App\Controller\RevenueController::delete
+    methods: DELETE
+
+# Routes expenses
+api_expenses:
+    path: /despesas
+    controller: App\Controller\ExpenseController::index
+    methods: GET
+
+api_expense_create:
+    path: /despesas
+    controller: App\Controller\ExpenseController::create
+    methods: POST
+
+api_expense_update:
+    path: /despesas/{id}
+    controller: App\Controller\ExpenseController::update
+    methods: PUT
+
+api_expense_find:
+    path: /despesas/{id}
+    controller: App\Controller\ExpenseController::findById
+    methods: GET
+
+api_expense_delete:
+    path: /despesas/{id}
+    controller: App\Controller\ExpenseController::delete
+    methods: DELETE
